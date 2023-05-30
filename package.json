@@ -11,7 +11,8 @@
     "test": "echo 'No Tests'",
     "prepack": "npm run test",
     "start": "npx somod start",
-    "deploy": "npx somod deploy"
+    "deploy": "npx somod deploy",
+    "postversion": "git push --follow-tags"
   },
   "keywords": [
     "somoe",
