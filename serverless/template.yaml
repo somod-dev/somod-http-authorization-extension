@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=../node_modules/somod-schema/schemas/serverless-template/index.json
+
+Resources:
+  AuthorizationMiddleware:
+    Type: SOMOD::Serverless::FunctionMiddleware
+    SOMOD::Access: public
+    Properties:
+      CodeUri:
+        SOMOD::FunctionMiddleware:
+          name: authorizer
+          allowedTypes:
+            - HttpApi

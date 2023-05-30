@@ -1,0 +1,45 @@
+{
+  "name": "somod-http-authorization-extension",
+  "version": "0.0.0",
+  "description": "This extension provides a middleware specification to implement the authorization strategy for serverless functions of type _HttpApi_.",
+  "scripts": {
+    "prettier": "npx prettier --check --ignore-unknown --no-error-on-unmatched-pattern ./**/*",
+    "eslint": "npx eslint ./ --no-error-on-unmatched-pattern",
+    "prebuild": "npm run prettier && npm run eslint",
+    "build": "npx somod build",
+    "pretest": "npm run build",
+    "test": "echo 'No Tests'",
+    "prepack": "npm run test",
+    "start": "npx somod start",
+    "deploy": "npx somod deploy"
+  },
+  "keywords": [
+    "somoe",
+    "authorization",
+    "authz",
+    "somod-extension",
+    "middleware",
+    "somod-middleware"
+  ],
+  "author": "Raghavendra K R <raghavendra@sodaru.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint-config-sodaru": "^1.0.1",
+    "prettier-config-sodaru": "^1.0.0",
+    "somod": "^1.17.2",
+    "somod-middleware": "^1.17.2"
+  },
+  "module": "build/lib/index.js",
+  "typings": "build/lib/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "sideEffects": false,
+  "somod": "1.17.2",
+  "eslintConfig": {
+    "extends": [
+      "sodaru"
+    ]
+  },
+  "prettier": "prettier-config-sodaru"
+}

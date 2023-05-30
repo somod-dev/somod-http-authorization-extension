@@ -44,11 +44,21 @@ type SomodHttpAuthorizedUser = {
 
 ## Implementing Authorization
 
-Extend the Authorization middleware in this module to provide the actual implementation of authorization.
+Extend the `AuthorizationMiddleware` resource in this module to provide the actual implementation of authorization.
 
 > Read the [Serverless Template.yaml](https://docs.somod.dev/reference/main-concepts/serverless/template.yaml) documentation to understand how to extend a resource from another SOMOD module
 
-The implementation can decide how to authorize the incoming request. The implementation should take care of the performance and scaling of the authorization strategy it uses.
+### Properties of Authorization Implementation
+
+Take care of the following properties when implementing the authorization middleware.
+
+- The implementation must decide how to authorize the incoming request.
+- The implementation should take care of the performance and scaling of the authorization strategy it uses.
+- The implementation must produce the `somod-http-authorized-user` in SomodMiddlewareContext.
+- must return a valid http response code during authorization failure.
+  - 401 - when there is no OR invalid credential in the request.
+  - 403 - credential is valid but not permitted to perform the action in the request.
+  - 500 - any other unknown failure.
 
 ## Issues
 
