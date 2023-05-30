@@ -15,8 +15,10 @@
     "postversion": "git push --follow-tags"
   },
   "keywords": [
-    "somoe",
+    "somod",
+    "serverless",
     "authorization",
+    "lambda",
     "authz",
     "somod-extension",
     "middleware",
