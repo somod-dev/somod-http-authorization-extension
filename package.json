@@ -1,6 +1,6 @@
 {
   "name": "somod-http-authorization-extension",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "This extension provides a middleware specification to implement the authorization strategy for serverless functions of type _HttpApi_.",
   "scripts": {
     "prettier": "npx prettier --check --ignore-unknown --no-error-on-unmatched-pattern ./**/*",
